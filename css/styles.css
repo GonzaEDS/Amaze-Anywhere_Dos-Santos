@@ -4,7 +4,7 @@
 :root {
     scroll-behavior: smooth;
 
-    --darkTransparentBg: #060606eb; 
+    --darkTransparentBg: #060606eb;
     --whiteText: rgb(238, 235, 235);
     --whiteBlueBg: #d4d4de;
     --primary: #287c81fa;
@@ -64,7 +64,7 @@ header {
     height: 2px;
     width: 1.8em;
     border-radius: 2px;
-    position: relative; 
+    position: relative;
 }
 
 .nav-toggle-label span::before, .nav-toggle-label span::after {
@@ -114,7 +114,7 @@ nav a {
     color: var(--whiteText);
     font-size: 1.2em;
     opacity: 0;
-    transition: 250ms ease-in-out;   
+    transition: 250ms ease-in-out;
 }
 
 .nav-toggle:checked ~ nav a {
@@ -192,6 +192,25 @@ nav button {
     font-size: 1.5em;
 }
 
+/* animación botón */
+@keyframes shining-btn {
+    0%{background-image:linear-gradient(45deg, transparent 0%, #ffffff5e, transparent 15%);}
+
+    1%{background-image:linear-gradient(45deg, transparent 8%, #ffffff5e, transparent 30%)}
+    2.25%{background-image:linear-gradient(45deg, transparent 18%, #ffffff5e, transparent 45%)}
+    3.5%{background-image:linear-gradient(45deg, transparent 27%, #ffffff5e, transparent 60%)}
+    4.75%{background-image:linear-gradient(45deg, transparent 36%, #ffffff5e, transparent 75%)}
+    6%{background-image:linear-gradient(45deg, transparent 45%, #ffffff5e, transparent 90%)}
+    7.25%{background-image:linear-gradient(45deg, transparent 54%, #ffffff5e, transparent 105%)}
+    8.5%{background-image:linear-gradient(45deg, transparent 63%, #ffffff5e, transparent 125%)}
+    9.75%{background-image:linear-gradient(45deg, transparent 70%, #ffffff5e, transparent 140%)}
+    11%{background-image:linear-gradient(45deg, transparent 80%, #ffffff5e, transparent 155%)}
+    12.25%{background-image:linear-gradient(45deg, transparent 90%, #ffffff5e, transparent 170%);
+    color:rgb(251, 252, 229)}
+    100%{background-image:linear-gradient(45deg, transparent 90%, #ffffff5e, transparent 170%)}
+}
+/* ends animación botón */
+
 .start-btn {
     font-size: 1.2em;
     color: var(--whiteText);
@@ -199,7 +218,16 @@ nav button {
     border: 1.5px solid white;
     padding: 1em;
     border-radius: 15em;
+    animation-name: shining-btn;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3.8s;
+    animation-delay: 0s;
 }
+
+
+
+
 
 /* general */
 section h1, section h2, section h3 {
@@ -282,7 +310,7 @@ footer {
     right: 0;
     width: 100%;
     height: 100%;
-    border: none;  
+    border: none;
 }
     /* ends rv */
 
@@ -509,7 +537,7 @@ footer {
 }
 
 /* banner */
-.pages-background { 
+.pages-background {
     grid-area: banner;
     /* background-repeat: repeat-x;
     min-width: 100%;
@@ -518,7 +546,7 @@ footer {
     background-image: url(../img/fondo-prueba1.png);
     background-size: 1041%;
     background-position: 76% 100%;
-    filter: drop-shadow(1px 3px 1px black);   
+    filter: drop-shadow(1px 3px 1px black);
 }
 
 .about-banner {
@@ -542,8 +570,8 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.4em;
-  
-} 
+
+}
 
 #about-start .fa-angle-down {
     color: white;
@@ -636,7 +664,7 @@ footer {
     flex-direction: column;
     filter: drop-shadow(0px 0px 1px #59636a);
     /* box-shadow: 2px 0px 2px 0px black; */
-    
+
 }
 
 .goals-card {
@@ -649,6 +677,85 @@ footer {
     background-color: #f5f7f8;
 }
 
+/* goals cards effect animation */
+@keyframes shadow {
+    0%{background: linear-gradient(90deg, #ffffff00 60%, #0000002b);}
+    0.5%{background: linear-gradient(85deg, #ffffff00 60%, #0000002b);}
+    1.0%{background: linear-gradient(80deg, #ffffff00 60%, #0000002b);}
+    1.5%{background: linear-gradient(75deg, #ffffff00 60%, #0000002b);}
+    2.0%{background: linear-gradient(70deg, #ffffff00 60%, #0000002b);}
+    2.5%{background: linear-gradient(65deg, #ffffff00 60%, #0000002b);}
+    3.0%{background: linear-gradient(60deg, #ffffff00 60%, #0000002b);}
+    3.5%{background: linear-gradient(55deg, #ffffff00 60%, #0000002b);}
+    4.0%{background: linear-gradient(50deg, #ffffff00 60%, #0000002b);}
+    4.5%{background: linear-gradient(45deg, #ffffff00 60%, #0000002b);}
+    5.0%{background: linear-gradient(40deg, #ffffff00 60%, #0000002b);}
+    5.5%{background: linear-gradient(35deg, #ffffff00 60%, #0000002b);}
+    6.0%{background: linear-gradient(30deg, #ffffff00 60%, #0000002b);}
+    6.5%{background: linear-gradient(25deg, #ffffff00 60%, #0000002b);}
+    7.0%{background: linear-gradient(20deg, #ffffff00 60%, #0000002b);}
+    7.5%{background: linear-gradient(15deg, #ffffff00 60%, #0000002b);}
+    8.0%{background: linear-gradient(10deg, #ffffff00 60%, #0000002b);}
+    8.5%{background: linear-gradient(5deg, #ffffff00 60%, #0000002b);}
+    9.0%{background: linear-gradient(1deg, #ffffff00 60%, #0000002b);}
+    9.5%{background: linear-gradient(355deg, #ffffff00 60%, #0000002b);}
+    10.0%{background: linear-gradient(350deg, #ffffff00 60%, #0000002b);}
+    10.5%{background: linear-gradient(345deg, #ffffff00 60%, #0000002b);}
+    11.0%{background: linear-gradient(340deg, #ffffff00 60%, #0000002b);}
+    11.5%{background: linear-gradient(335deg, #ffffff00 60%, #0000002b);}
+    12.0%{background: linear-gradient(330deg, #ffffff00 60%, #0000002b);}
+    12.5%{background: linear-gradient(325deg, #ffffff00 60%, #0000002b);}
+    13.0%{background: linear-gradient(320deg, #ffffff00 60%, #0000002b);}
+    13.5%{background: linear-gradient(315deg, #ffffff00 60%, #0000002b);}
+    14.0%{background: linear-gradient(310deg, #ffffff00 60%, #0000002b);}
+    14.5%{background: linear-gradient(305deg, #ffffff00 60%, #0000002b);}
+    15.0%{background: linear-gradient(300deg, #ffffff00 60%, #0000002b);}
+    15.5%{background: linear-gradient(295deg, #ffffff00 60%, #0000002b);}
+    16.0%{background: linear-gradient(290deg, #ffffff00 60%, #0000002b);}
+    16.5%{background: linear-gradient(285deg, #ffffff00 60%, #0000002b);}
+    17.0%{background: linear-gradient(280deg, #ffffff00 60%, #0000002b);}
+    17.5%{background: linear-gradient(275deg, #ffffff00 60%, #0000002b);}
+    18.0%{background: linear-gradient(270deg, #ffffff00 60%, #0000002b);}
+    18.5%{background: linear-gradient(265deg, #ffffff00 60%, #0000002b);}
+    19.0%{background: linear-gradient(260deg, #ffffff00 60%, #0000002b);}
+    19.5%{background: linear-gradient(255deg, #ffffff00 60%, #0000002b);}
+    20.0%{background: linear-gradient(250deg, #ffffff00 60%, #0000002b);}
+    20.5%{background: linear-gradient(245deg, #ffffff00 60%, #0000002b);}
+    21.0%{background: linear-gradient(240deg, #ffffff00 60%, #0000002b);}
+    21.5%{background: linear-gradient(235deg, #ffffff00 60%, #0000002b);}
+    22.0%{background: linear-gradient(230deg, #ffffff00 60%, #0000002b);}
+    22.5%{background: linear-gradient(225deg, #ffffff00 60%, #0000002b);}
+    23.0%{background: linear-gradient(220deg, #ffffff00 60%, #0000002b);}
+    23.5%{background: linear-gradient(215deg, #ffffff00 60%, #0000002b);}
+    24.0%{background: linear-gradient(210deg, #ffffff00 60%, #0000002b);}
+    24.5%{background: linear-gradient(205deg, #ffffff00 60%, #0000002b);}
+    25.0%{background: linear-gradient(200deg, #ffffff00 60%, #0000002b);}
+    25.5%{background: linear-gradient(195deg, #ffffff00 60%, #0000002b);}
+    26.0%{background: linear-gradient(190deg, #ffffff00 60%, #0000002b);}
+    26.5%{background: linear-gradient(185deg, #ffffff00 60%, #0000002b);}
+    27.0%{background: linear-gradient(180deg, #ffffff00 60%, #0000002b);}
+    27.5%{background: linear-gradient(175deg, #ffffff00 60%, #0000002b);}
+    28.0%{background: linear-gradient(170deg, #ffffff00 60%, #0000002b);}
+    28.5%{background: linear-gradient(165deg, #ffffff00 60%, #0000002b);}
+    29.0%{background: linear-gradient(160deg, #ffffff00 60%, #0000002b);}
+    29.5%{background: linear-gradient(155deg, #ffffff00 60%, #0000002b);}
+    30.0%{background: linear-gradient(150deg, #ffffff00 60%, #0000002b);}
+    30.5%{background: linear-gradient(145deg, #ffffff00 60%, #0000002b);}
+    31.0%{background: linear-gradient(140deg, #ffffff00 60%, #0000002b);}
+    31.5%{background: linear-gradient(135deg, #ffffff00 60%, #0000002b);}
+    32.0%{background: linear-gradient(130deg, #ffffff00 60%, #0000002b);}
+    32.5%{background: linear-gradient(125deg, #ffffff00 60%, #0000002b);}
+    33.0%{background: linear-gradient(120deg, #ffffff00 60%, #0000002b);}
+    33.5%{background: linear-gradient(115deg, #ffffff00 60%, #0000002b);}
+    34.0%{background: linear-gradient(110deg, #ffffff00 60%, #0000002b);}
+    34.5%{background: linear-gradient(105deg, #ffffff00 60%, #0000002b);}
+    35.0%{background: linear-gradient(100deg, #ffffff00 60%, #0000002b);}
+    35.5%{background: linear-gradient(95deg, #ffffff00 60%, #0000002b);}
+    36.0%{background: linear-gradient(90deg, #ffffff00 60%, #0000002b);}
+    100.0%{background: linear-gradient(90deg, #ffffff00 60%, #0000002b);}
+}
+/* end animation */
+
 .goals-card-fx {
     position: absolute;
     top: 0;
@@ -656,7 +763,12 @@ footer {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, #ffffff00 60%, #0000002b);
-} 
+    animation-name: shadow;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 8s;
+    animation-delay: 0;
+}
 
 .goals-img-container {
     position: relative;
@@ -669,7 +781,7 @@ footer {
     top: 0;
     left: 0;
     background-repeat: no-repeat;
-    background-size: cover;   
+    background-size: cover;
     width: 100%;
     height: 100%;
 }
@@ -687,7 +799,7 @@ footer {
 
 .goals-img-1 {
     background-image: url(../img/Alan-400x220.webp);
-   
+
 }
 
 .goals-img-2 {
@@ -695,7 +807,7 @@ footer {
 }
 
 .goals-img-3 {
-    background-image: url(../img/foro-crop-3.png);    
+    background-image: url(../img/foro-crop-3.png);
 }
 
 .goals-text {
@@ -713,7 +825,7 @@ footer {
     text-transform: uppercase;
 }
 
-.goals-text p { 
+.goals-text p {
     font-size: 1rem;
     line-height: 1.3;
     color: #686868;
@@ -826,11 +938,11 @@ footer {
     background-position: center;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .cardsbackground {
-    
+
     filter: drop-shadow(2px 4px 6px black);
     background: linear-gradient(90deg, #bfa5008c, #bfa5008c);
     background: linear-gradient(90deg, #efd94e8a, #ffe4388c);
@@ -850,7 +962,7 @@ footer {
     border-radius: 15px;
     width: 90%;
     height: 90%;
- 
+
     background: linear-gradient(90deg, rgb(0 0 0 / 82%), rgb(0 0 0 / 66%));
     color: rgb(142 175 203);
     color: rgb(150 182 209);
@@ -1064,7 +1176,7 @@ footer {
 
 .buy-forms-section legend {
     position: absolute;
-} 
+}
 
 .account-form legend {
     top: -3em;
@@ -1096,7 +1208,7 @@ legend  h4 {
     border-radius: 15px;
     border: none;
     cursor: pointer;
-    margin-left: 2em;       
+    margin-left: 2em;
 }
 
 .buy-forms-section button:hover {
@@ -1183,12 +1295,12 @@ fieldset label {
         min-width: 4.1rem;
     }
 
-    
+
 
     /* ABOUT PAGE */
 
     .header-titles {
-        font-size: 2.1em;  
+        font-size: 2.1em;
     }
 
     .about-start-btn {
@@ -1304,7 +1416,7 @@ fieldset label {
     .buy-forms-section input {
         font-size: 1.2rem;
     }
-  
+
 }
 
     /* (referencia iPhone 12 Pro) */
@@ -1420,7 +1532,7 @@ fieldset label {
     }
 
 
-    
+
 
 
 
@@ -1460,7 +1572,7 @@ fieldset label {
 
     .single-payment-section {
         grid-row: 27/31;
-    } 
+    }
     /* ends grid */
 
     header a {
@@ -1504,7 +1616,7 @@ fieldset label {
     }
 
     /* footer */
-    footer { 
+    footer {
         font-size: 1.5em;
     }
 
@@ -1631,7 +1743,7 @@ fieldset label {
         font-size: 1.9rem;
         margin-left: 0.5em;
     }
-    
+
     .faqs p {
         font-size: 1.8rem;
     }
@@ -1914,7 +2026,7 @@ fieldset label {
     .quote {
         gap: 2.5em;
     }
-    
+
     .quote h3 {
         font-size: 1.9rem;
     }
@@ -1933,7 +2045,7 @@ fieldset label {
         font-size: 4.8rem;
     }
 
-    
+
 }
 
 /* iPad mini horizontal */
@@ -1966,7 +2078,7 @@ fieldset label {
     nav a {
         font-size: 16px;
         opacity: 1;
-        transition: all 0.3s ease 0s;    
+        transition: all 0.3s ease 0s;
     }
 
     nav a:hover {
@@ -1995,7 +2107,7 @@ fieldset label {
     }
 
     nav button {
-        all: unset; 
+        all: unset;
         min-width: fit-cntent;
         flex-wrap: nowrap;
     }
@@ -2070,7 +2182,7 @@ fieldset label {
     .amaze-title {
         position: unset;
         font-size: 7rem;
-        width: min-content;   
+        width: min-content;
     }
 
     #start-link {
@@ -2262,7 +2374,7 @@ fieldset label {
         grid-row: 42/52;
     }
     /* ends grid */
-    
+
     header {
         padding: 0 3rem 0 2rem;
     }
@@ -2329,7 +2441,7 @@ fieldset label {
         cursor: pointer;
         transform: translate(0px, 4em);
     }
-    
+
     footer p {
         font-size: 1rem;
     }
@@ -2427,12 +2539,12 @@ fieldset label {
 
     .about-start-btn {
         display: none;
-    }  
+    }
     .header-titles {
         place-self: center;
         padding: unset;
         font-size: 2.7rem;
-    } 
+    }
 
     .pages-background {
         background-image: url(../img/fondo-prueba1.png);
@@ -2460,7 +2572,7 @@ fieldset label {
     .info-card-img {
         height: 55%;
     }
-    
+
     .info-card-text {
         height: 55%;
         width: 43%;
@@ -2471,9 +2583,9 @@ fieldset label {
         font-size: 1.2rem;
     }
 
-    
+
     .info-card p {
-        
+
         font-size: 1.2rem;
     }
 
@@ -2515,7 +2627,7 @@ fieldset label {
     .goals-text h3 {
         font-size: 1.5rem;
     }
-    
+
     .goals-text p {
         font-size: 1.2rem;
     }
@@ -2616,8 +2728,8 @@ fieldset label {
         gap: 4em;
     }
 
-    
+
 }
-    
-    
+
+
 
